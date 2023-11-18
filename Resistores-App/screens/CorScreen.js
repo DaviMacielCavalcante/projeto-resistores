@@ -1,37 +1,59 @@
+import { useState } from "react";
 import { View, Text, StyleSheet, TextInput } from "react-native";
 
 import Botao from "../components/ui/Botao";
 
-function CorScreen() {
+function CorScreen({navigation}) {
+
+    const [cor_1, setCor1] = useState('');
+    const [cor_2, setCor2] = useState('');
+    const [cor_3, setCor3] = useState('');
+
+    function corResultadoHandler() {
+        navigation.navigate('CorResultadoScreen', { cor1: cor_1, cor2: cor_2, cor3: cor_3});
+    }
+
+    function primeiraCorHandler(primeiraCor) {
+        setCor1(primeiraCor);
+    }
+
+    function segundaCorHandler(segundaCor) {
+        setCor2(segundaCor);
+    }
+
+    function terceiraCorHandler(terceiraCor) {
+        setCor3(terceiraCor);
+    }
+
     return (
         <View style={styles.rootContainer}>
             <View>
                 <View style={styles.inputsContainer}>
                     <Text style={styles.txt
                     }>Insira a 1º cor: </Text>   
-                    <View style={styles.   inputContainer}>
+                    <View style={styles.inputContainer}>
                         <TextInput style
-                        ={styles.txtInput}/> 
+                        ={styles.txtInput} onChangeText={primeiraCorHandler}/> 
                     </View>         
                 </View>
                 <View style={styles.inputsContainer}>
                     <Text style={styles.txt
                     }>Insira a 2º cor: </Text>
-                    <View style={styles.   inputContainer}>
+                    <View style={styles.inputContainer}>
                         <TextInput style
-                        ={styles.txtInput}/> 
+                        ={styles.txtInput} onChangeText={segundaCorHandler}/> 
                     </View>
                 </View>
                 <View style={styles.inputsContainer}>
                     <Text style={styles.txt
                     }>Insira a 3º cor: </Text>
-                    <View style={styles.   inputContainer}>
+                    <View style={styles.inputContainer}>
                         <TextInput style
-                        ={styles.txtInput}/> 
+                        ={styles.txtInput} onChangeText={terceiraCorHandler}/> 
                     </View>
                 </View>
             </View>
-            <Botao>ENVIAR</Botao>
+            <Botao onPress={corResultadoHandler}>ENVIAR</Botao>
         </View>
     );
 }
