@@ -1,13 +1,57 @@
+import { useState, useEffect } from "react";
 import { View, Text, StyleSheet } from "react-native";
 
 import Botao from "../components/ui/Botao";
 import Cores from "../constants/Cores";
 
-function CorResultadoScreen({navigation, cor1, cor2, cor3}) {
+function CorResultadoScreen({navigation, cor1, cor2, cor3}) {    
     
     function voltarHandler() {
         navigation.navigate('InitialScreen');
     }
+
+    const [primeiraCor, setPrimeiraCor] = useState('white');
+    const [segundaCor, setSegundaCor] = useState('white');
+    const [terceiraCor, setTerceiraCor] = useState('white');
+
+    useEffect(() => {
+        function coresEscolhidas(cor_1, cor_2, cor_3) {
+          let primeira = 'white';
+          let segunda = 'white';
+          let terceira = 'white';
+    
+          switch (cor_1) {
+            case 'vermelho':
+              primeira = Cores.vermelho.cor;
+              break;
+            default:
+              primeira = 'white';
+              break;
+          }
+          switch (cor_2) {
+            case 'vermelho':
+              segunda = Cores.vermelho.cor;
+              break;
+            default:
+              segunda = 'white';
+              break;
+          }
+          switch (cor_3) {
+            case 'vermelho':
+              terceira = Cores.vermelho.cor;
+              break;
+            default:
+              terceira = 'white';
+              break;
+          }
+    
+          setPrimeiraCor(primeira);
+          setSegundaCor(segunda);
+          setTerceiraCor(terceira);
+        }
+    
+        coresEscolhidas(cor1, cor2, cor3);
+      }, [cor1, cor2, cor3]);
 
     return (
         <View style={styles.rootContainer}>
@@ -24,7 +68,7 @@ function CorResultadoScreen({navigation, cor1, cor2, cor3}) {
                 <View style={styles.faixaContainer3}>
                 </View>
             </View>    
-            <View style={styles.contentContainer}>
+            <View>
                 <Botao onPress={voltarHandler}>VOLTAR</Botao>
             </View>            
         </View>
@@ -59,15 +103,12 @@ const styles = StyleSheet.create({
         paddingHorizontal: 60
     },
     faixaContainer1: {
-        backgroundColor: Cores.amarelo.cor,
         width: '30%', 
     },
     faixaContainer2: {
-        backgroundColor: Cores.verde.cor,
         width: '30%',
     },
     faixaContainer3: {
-        backgroundColor: Cores.preto.cor,
         width: '30%',
     }
 });

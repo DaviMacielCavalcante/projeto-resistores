@@ -14,6 +14,7 @@ function CorScreen({navigation}) {
     }
 
     function primeiraCorHandler(primeiraCor) {
+        primeiraCor = 'vermelho'
         setCor1(primeiraCor);
     }
 
