@@ -2,6 +2,7 @@ import { useState } from "react";
 import { View, Text, StyleSheet, TextInput } from "react-native";
 
 import Botao from "../components/ui/Botao";
+import Cores from "../constants/Cores"
 
 function CorScreen({navigation}) {
 
@@ -14,16 +15,116 @@ function CorScreen({navigation}) {
     }
 
     function primeiraCorHandler(primeiraCor) {
-        primeiraCor = 'vermelho'
-        setCor1(primeiraCor);
+        switch (primeiraCor) {
+            case "preto":
+                setCor1(Cores.preto.cor)
+                break;     
+            case "marrom":
+                setCor1(Cores.marrom.cor)
+                break;
+            case "vermelho":
+                setCor1(Cores.vermelho.cor)
+                break;   
+            case "laranja":
+                setCor1(Cores.laranja.cor)
+                break;
+            case "amarelo":
+                setCor1(Cores.amarelo.cor)
+                break;
+            case "verde":
+                setCor1(Cores.verde.cor)
+                break;
+            case "azul":
+                setCor1(Cores.azul.cor)
+                break;
+            case "violeta":
+                setCor1(Cores.violeta.cor)
+                break;
+            case "cinza":
+                setCor1(Cores.cinza.cor)
+                break;
+            case "branco":
+                setCor1(Cores.branco.cor)
+                break;
+            default:
+                "white"
+                break;
+        }
     }
 
     function segundaCorHandler(segundaCor) {
-        setCor2(segundaCor);
-    }
-
+        switch (segundaCor) {
+            case "preto":
+                setCor2(Cores.preto.cor)
+                break;     
+            case "marrom":
+                setCor2(Cores.marrom.cor)
+                break;
+            case "vermelho":
+                setCor2(Cores.vermelho.cor)
+                break;   
+            case "laranja":
+                setCor2(Cores.laranja.cor)
+                break;
+            case "amarelo":
+                setCor2(Cores.amarelo.cor)
+                break;
+            case "verde":
+                setCor2(Cores.verde.cor)
+                break;
+            case "azul":
+                setCor2(Cores.azul.cor)
+                break;
+            case "violeta":
+                setCor2(Cores.violeta.cor)
+                break;
+            case "cinza":
+                setCor2(Cores.cinza.cor)
+                break;
+            case "branco":
+                setCor2(Cores.branco.cor)
+                break;
+            default:
+                "white"
+                break;
+        }
+    }3
     function terceiraCorHandler(terceiraCor) {
-        setCor3(terceiraCor);
+        switch (terceiraCor) {
+            case "preto":
+                setCor3(Cores.preto.cor)
+                break;     
+            case "marrom":
+                setCor3(Cores.marrom.cor)
+                break;
+            case "vermelho":
+                setCor3(Cores.vermelho.cor)
+                break;   
+            case "laranja":
+                setCor3(Cores.laranja.cor)
+                break;
+            case "amarelo":
+                setCor3(Cores.amarelo.cor)
+                break;
+            case "verde":
+                setCor3(Cores.verde.cor)
+                break;
+            case "azul":
+                setCor3(Cores.azul.cor)
+                break;
+            case "violeta":
+                setCor3(Cores.violeta.cor)
+                break;
+            case "cinza":
+                setCor3(Cores.cinza.cor)
+                break;
+            case "branco":
+                setCor3(Cores.branco.cor)
+                break;
+            default:
+                "white"
+                break;
+        }
     }
 
     return (
@@ -80,7 +181,7 @@ const styles = StyleSheet.create({
         height: '50%',
         borderRadius: 10,
         margin: 10,
-        padding: 10,
+        padding: 5,
         fontWeight: 'bold',
     },
     txt: {
