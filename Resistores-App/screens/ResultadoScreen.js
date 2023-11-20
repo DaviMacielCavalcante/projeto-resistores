@@ -2,12 +2,27 @@ import { View, Text, StyleSheet} from "react-native";
 
 import Botao from "../components/ui/Botao";
 
-function ValorResultadoScreen({navigation, route}) {    
+function ResultadoScreen({navigation, route}) {    
 
     const valor1 = route.params.valor1;
     const valor2 = route.params.valor2;
     const valor3 = route.params.valor3;
 
+    const cor1 = route.params.cor1;
+    const cor2 = route.params.cor2;
+    const cor3 = route.params.cor3;
+
+    const styles2 = StyleSheet.create({
+        corCont1: {
+            backgroundColor: cor1
+        },
+        corCont2: {
+            backgroundColor: cor2
+        },
+        corCont3: {
+            backgroundColor: cor3
+        }
+    });
     
     function voltarHandler() {
         navigation.navigate('InitialScreen');
@@ -33,7 +48,15 @@ function ValorResultadoScreen({navigation, route}) {
                     <View>
                         <Text style={styles.txt}>Ohm</Text>
                     </View>             
-                </View>                     
+                </View>   
+                {/* <View style={styles.faixasContainer}>
+                    <View style={[styles.faixaContainer1, styles2.corCont1]}>
+                    </View>
+                    <View style={[styles.faixaContainer2, styles2.corCont2]}>
+                    </View>
+                    <View style={[styles.faixaContainer3, styles2.corCont3]}>
+                    </View>
+                </View>                   */}
             <View>
                 <Botao onPress={voltarHandler}>VOLTAR</Botao>
             </View>            
@@ -73,7 +96,21 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         height: '20%',
         width: '50%'
+    },
+    faixasContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-evenly',
+        paddingHorizontal: 60
+    },
+    faixaContainer1: {
+        width: '30%', 
+    },
+    faixaContainer2: {
+        width: '30%',
+    },
+    faixaContainer3: {
+        width: '30%',
     }
 });
 
-export default ValorResultadoScreen;
+export default ResultadoScreen;

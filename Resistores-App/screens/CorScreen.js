@@ -11,7 +11,7 @@ function CorScreen({navigation}) {
     const [cor_3, setCor3] = useState('');
 
     function corResultadoHandler() {
-        navigation.navigate('CorResultadoScreen', { cor1: cor_1, cor2: cor_2, cor3: cor_3});
+        navigation.navigate('ResultadoScreen', { cor1: cor_1, cor2: cor_2, cor3: cor_3});
     }
 
     function primeiraCorHandler(primeiraCor) {
