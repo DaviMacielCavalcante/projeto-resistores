@@ -6,123 +6,156 @@ import Cores from "../constants/Cores"
 
 function CorScreen({navigation}) {
 
+    const [valor_1, setValor1] = useState('');
+    const [valor_2, setValor2] = useState('');
+    const [valor_3, setValor3] = useState('');
+
     const [cor_1, setCor1] = useState('');
     const [cor_2, setCor2] = useState('');
     const [cor_3, setCor3] = useState('');
 
     function corResultadoHandler() {
-        navigation.navigate('ResultadoScreen', { cor1: cor_1, cor2: cor_2, cor3: cor_3});
+        navigation.navigate('ResultadoScreen', { valor1: valor_1, valor2: valor_2, valor3:valor_3, cor1: cor_1, cor2: cor_2, cor3: cor_3});
     }
 
     function primeiraCorHandler(primeiraCor) {
+        primeiraCor = primeiraCor.toLowerCase();
         switch (primeiraCor) {
             case "preto":
-                setCor1(Cores.preto.cor)
+                setValor1(Cores.preto.valor);
+                setCor1(Cores.preto.cor);
                 break;     
             case "marrom":
-                setCor1(Cores.marrom.cor)
+                setValor1(Cores.marrom.valor);
+                setCor1(Cores.marrom.cor);
                 break;
             case "vermelho":
-                setCor1(Cores.vermelho.cor)
+                setValor1(Cores.vermelho.valor);
+                setCor1(Cores.vermelho.cor);
                 break;   
             case "laranja":
-                setCor1(Cores.laranja.cor)
+                setValor1(Cores.laranja.valor);
+                setCor1(Cores.laranja.cor);
                 break;
             case "amarelo":
-                setCor1(Cores.amarelo.cor)
+                setValor1(Cores.amarelo.valor);
+                setCor1(Cores.amarelo.cor);
                 break;
             case "verde":
-                setCor1(Cores.verde.cor)
+                setValor1(Cores.verde.valor);
+                setCor1(Cores.verde.cor);
                 break;
             case "azul":
-                setCor1(Cores.azul.cor)
+                setValor1(Cores.azul.valor);
+                setCor1(Cores.azul.cor);
                 break;
             case "violeta":
-                setCor1(Cores.violeta.cor)
+                setValor1(Cores.violeta.valor);
+                setCor1(Cores.violeta.cor);
                 break;
             case "cinza":
-                setCor1(Cores.cinza.cor)
+                setValor1(Cores.cinza.valor);
+                setCor1(Cores.cinza.cor);
                 break;
             case "branco":
-                setCor1(Cores.branco.cor)
+                setValor1(Cores.branco.valor);
+                setCor1(Cores.branco.cor);
                 break;
             default:
-                "white"
                 break;
         }
     }
 
     function segundaCorHandler(segundaCor) {
+        segundaCor = segundaCor.toLowerCase();
         switch (segundaCor) {
             case "preto":
-                setCor2(Cores.preto.cor)
+                setValor2(Cores.preto.valor);
+                setCor2(Cores.preto.cor);
                 break;     
             case "marrom":
-                setCor2(Cores.marrom.cor)
+                setValor2(Cores.marrom.valor);
+                setCor2(Cores.marrom.cor);
                 break;
             case "vermelho":
-                setCor2(Cores.vermelho.cor)
+                setValor2(Cores.vermelho.valor);
+                setCor2(Cores.vermelho.cor);
                 break;   
             case "laranja":
-                setCor2(Cores.laranja.cor)
+                setValor2(Cores.laranja.valor);
+                setCor2(Cores.laranja.cor);
                 break;
             case "amarelo":
-                setCor2(Cores.amarelo.cor)
+                setValor2(Cores.amarelo.valor);
+                setCor2(Cores.amarelo.cor);
                 break;
             case "verde":
-                setCor2(Cores.verde.cor)
+                setValor2(Cores.verde.valor);
+                setCor2(Cores.verde.cor);
                 break;
             case "azul":
-                setCor2(Cores.azul.cor)
+                setValor2(Cores.azul.valor);
+                setCor2(Cores.azul.cor);
                 break;
             case "violeta":
-                setCor2(Cores.violeta.cor)
+                setValor2(Cores.violeta.valor);
+                setCor2(Cores.violeta.cor);
                 break;
             case "cinza":
-                setCor2(Cores.cinza.cor)
+                setValor2(Cores.cinza.valor);
+                setCor2(Cores.cinza.cor);
                 break;
             case "branco":
-                setCor2(Cores.branco.cor)
+                setValor2(Cores.branco.valor);
+                setCor2(Cores.branco.cor);
                 break;
             default:
-                "white"
                 break;
         }
-    }3
+    }
     function terceiraCorHandler(terceiraCor) {
+        terceiraCor = terceiraCor.toLowerCase();
         switch (terceiraCor) {
             case "preto":
-                setCor3(Cores.preto.cor)
+                setCor3(Cores.preto.cor);
                 break;     
             case "marrom":
-                setCor3(Cores.marrom.cor)
+                setValor3(Cores.marrom.zeros);
+                setCor3(Cores.marrom.cor);
                 break;
             case "vermelho":
-                setCor3(Cores.vermelho.cor)
+                setValor3(Cores.vermelho.zeros);
+                setCor3(Cores.vermelho.cor);
                 break;   
             case "laranja":
-                setCor3(Cores.laranja.cor)
+                setValor3(Cores.laranja.zeros);
+                setCor3(Cores.laranja.cor);
                 break;
             case "amarelo":
-                setCor3(Cores.amarelo.cor)
+                setValor3(Cores.amarelo.zeros);
+                setCor3(Cores.amarelo.cor);
                 break;
             case "verde":
-                setCor3(Cores.verde.cor)
+                setValor3(Cores.verde.zeros);
+                setCor3(Cores.verde.cor);
                 break;
             case "azul":
-                setCor3(Cores.azul.cor)
+                setValor3(Cores.azul.zeros);
+                setCor3(Cores.azul.cor);
                 break;
             case "violeta":
-                setCor3(Cores.violeta.cor)
+                setValor3(Cores.violeta.zeros);
+                setCor3(Cores.violeta.cor);
                 break;
             case "cinza":
-                setCor3(Cores.cinza.cor)
+                setValor3(Cores.cinza.zeros);
+                setCor3(Cores.cinza.cor);
                 break;
             case "branco":
-                setCor3(Cores.branco.cor)
+                setValor3(Cores.branco.zeros);
+                setCor3(Cores.branco.cor);
                 break;
             default:
-                "white"
                 break;
         }
     }

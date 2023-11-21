@@ -11,7 +11,7 @@ const Cores = {
     "vermelho": {
         "cor": "#ff0000",
         "valor": 2,
-        "zeros": "00"
+        "zeros": "0 0"
     },
     "laranja": {
         "cor": "#ffa500",
@@ -21,12 +21,12 @@ const Cores = {
     "amarelo": {
         "cor": "#ffff00",
         "valor": 4,
-        "zeros": "0000"
+        "zeros": "0 K"
     },
     "verde": {
         "cor": "#008000",
         "valor": 5,
-        "zeros": "00000"
+        "zeros": "0 0 K"
     },
     "azul": {
         "cor": "#0000ff",
@@ -35,11 +35,13 @@ const Cores = {
     },
     "violeta": {
         "cor": "#ee82ee",
-        "valor": 7
+        "valor": 7,
+        "zeros": "0 M",
     },
     "cinza": {
         "cor": "#808080",
-        "valor": 8
+        "valor": 8,
+        "zeros": "0 0 M"
     },
     "branco": {
         "cor": "#ffffff",

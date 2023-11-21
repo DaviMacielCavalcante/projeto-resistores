@@ -5,7 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import InitialScreen from './screens/InitialScreen';
 import ValorNumericoScreen from './screens/ValorNumericoScreen';
 import CorScreen from './screens/CorScreen';
-import ResultadoScreen from './screens/CorResultadoScreen';
+import ResultadoScreen from './screens/ResultadoScreen';
 
 const Tab = createNativeStackNavigator();
 

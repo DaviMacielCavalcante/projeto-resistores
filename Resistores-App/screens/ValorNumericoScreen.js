@@ -8,7 +8,7 @@ function ValorNumericoScreen({navigation}) {
 
     const [valor_1, setValor1] = useState('');
     const [valor_2, setValor2] = useState('');
-    const [valor_3, setValor3] = useState(undefined);
+    const [valor_3, setValor3] = useState('');
 
     const [cor_1, setCor1] = useState('');
     const [cor_2, setCor2] = useState('');
@@ -21,48 +21,47 @@ function ValorNumericoScreen({navigation}) {
     function primeiroValorHandler(primeiroValor) {
         primeiroValor = primeiroValor.toLowerCase();
         switch (primeiroValor) {
-            case "preto":
+            case "0":
                 setValor1(Cores.preto.valor);
                 setCor1(Cores.preto.cor);
                 break;     
-            case "marrom":
+            case "1":
                 setValor1(Cores.marrom.valor);
                 setCor1(Cores.marrom.cor);
                 break;
-            case "vermelho":
+            case "2":
                 setValor1(Cores.vermelho.valor);
                 setCor1(Cores.vermelho.cor);
                 break;   
-            case "laranja":
+            case "3":
                 setValor1(Cores.laranja.valor);
                 setCor1(Cores.laranja.cor);
                 break;
-            case "amarelo":
+            case "4":
                 setValor1(Cores.amarelo.valor);
                 setCor1(Cores.amarelo.cor);
                 break;
-            case "verde":
+            case "5":
                 setValor1(Cores.verde.valor);
                 setCor1(Cores.verde.cor);
                 break;
-            case "azul":
+            case "6":
                 setValor1(Cores.azul.valor);
                 setCor1(Cores.azul.cor);
                 break;
-            case "violeta":
+            case "7":
                 setValor1(Cores.violeta.valor);
                 setCor1(Cores.violeta.cor);
                 break;
-            case "cinza":
+            case "8":
                 setValor1(Cores.cinza.valor);
                 setCor1(Cores.cinza.cor);
                 break;
-            case "branco":
+            case "9":
                 setValor1(Cores.branco.valor);
                 setCor1(Cores.branco.cor);
                 break;
             default:
-                "white"
                 break;
         }
     }
@@ -70,48 +69,47 @@ function ValorNumericoScreen({navigation}) {
     function segundoValorHandler(segundoValor) {
         segundoValor = segundoValor.toLowerCase();
         switch (segundoValor) {
-            case "preto":
+            case "0":
                 setValor2(Cores.preto.valor);
                 setCor2(Cores.preto.cor);
                 break;     
-            case "marrom":
+            case "1":
                 setValor2(Cores.marrom.valor);
                 setCor2(Cores.marrom.cor);
                 break;
-            case "vermelho":
+            case "2":
                 setValor2(Cores.vermelho.valor);
                 setCor2(Cores.vermelho.cor);
                 break;   
-            case "laranja":
+            case "3":
                 setValor2(Cores.laranja.valor);
                 setCor2(Cores.laranja.cor);
                 break;
-            case "amarelo":
+            case "4":
                 setValor2(Cores.amarelo.valor);
                 setCor2(Cores.amarelo.cor);
                 break;
-            case "verde":
+            case "5":
                 setValor2(Cores.verde.valor);
                 setCor2(Cores.verde.cor);
                 break;
-            case "azul":
+            case "6":
                 setValor2(Cores.azul.valor);
                 setCor2(Cores.azul.cor);
                 break;
-            case "violeta":
+            case "7":
                 setValor2(Cores.violeta.valor);
                 setCor2(Cores.violeta.cor);
                 break;
-            case "cinza":
+            case "8":
                 setValor2(Cores.cinza.valor);
                 setCor2(Cores.cinza.cor);
                 break;
-            case "branco":
-                setValor1(Cores.branco.valor);
-                setCor1(Cores.branco.cor);
+            case "9":
+                setValor2(Cores.branco.valor);
+                setCor2(Cores.branco.cor);
                 break;
             default:
-                "white"
                 break;
         }
     }
@@ -119,48 +117,46 @@ function ValorNumericoScreen({navigation}) {
     function terceiroValorHandler(terceiroValor) {
         terceiroValor = terceiroValor.toLowerCase();
         switch (terceiroValor) {
-            case "preto":
-                setValor3(Cores.preto.valor);
+            case "0":
                 setCor3(Cores.preto.cor);
                 break;     
-            case "marrom":
-                setValor3(Cores.marrom.valor);
+            case "1":
+                setValor3(Cores.marrom.zeros);
                 setCor3(Cores.marrom.cor);
                 break;
-            case "vermelho":
-                setValor3(Cores.vermelho.valor);
+            case "2":
+                setValor3(Cores.vermelho.zeros);
                 setCor3(Cores.vermelho.cor);
                 break;   
-            case "laranja":
-                setValor3(Cores.laranja.valor);
+            case "3":
+                setValor3(Cores.laranja.zeros);
                 setCor3(Cores.laranja.cor);
                 break;
-            case "amarelo":
-                setValor3(Cores.amarelo.valor);
+            case "4":
+                setValor3(Cores.amarelo.zeros);
                 setCor3(Cores.amarelo.cor);
                 break;
-            case "verde":
-                setValor3(Cores.verde.valor);
+            case "5":
+                setValor3(Cores.verde.zeros);
                 setCor3(Cores.verde.cor);
                 break;
-            case "azul":
-                setValor3(Cores.azul.valor);
+            case "6":
+                setValor3(Cores.azul.zeros);
                 setCor3(Cores.azul.cor);
                 break;
-            case "violeta":
-                setValor3(Cores.violeta.valor);
+            case "7":
+                setValor3(Cores.violeta.zeros);
                 setCor3(Cores.violeta.cor);
                 break;
-            case "cinza":
-                setValor3(Cores.cinza.valor);
+            case "8":
+                setValor3(Cores.cinza.zeros);
                 setCor3(Cores.cinza.cor);
                 break;
-            case "branco":
-                setValor3(Cores.branco.valor);
+            case "9":
+                setValor3(Cores.branco.zeros);
                 setCor3(Cores.branco.cor);
                 break;
             default:
-                "white"
                 break;
         }
     }

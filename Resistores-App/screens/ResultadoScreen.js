@@ -1,4 +1,5 @@
 import { View, Text, StyleSheet} from "react-native";
+import { MaterialCommunityIcons } from '@expo/vector-icons'
 
 import Botao from "../components/ui/Botao";
 
@@ -35,28 +36,28 @@ function ResultadoScreen({navigation, route}) {
                     <Text style={styles.txt}>RESULTADO</Text>
                 </View>                
             </View> 
-                <View style={styles.valoresContainer}>
-                    <View>
-                        <Text style={styles.txt}>{valor1}</Text>
-                    </View>
-                    <View>
-                        <Text style={styles.txt}>{valor2}</Text>
-                    </View>
-                    <View>
-                        <Text style={styles.txt}>{valor3}</Text>
-                    </View>
-                    <View>
-                        <Text style={styles.txt}>Ohm</Text>
-                    </View>             
-                </View>   
-                {/* <View style={styles.faixasContainer}>
-                    <View style={[styles.faixaContainer1, styles2.corCont1]}>
-                    </View>
-                    <View style={[styles.faixaContainer2, styles2.corCont2]}>
-                    </View>
-                    <View style={[styles.faixaContainer3, styles2.corCont3]}>
-                    </View>
-                </View>                   */}
+            <View style={styles.valoresContainer}>
+                <View>
+                    <Text style={styles.txt}>{valor1}</Text>
+                </View>
+                <View>
+                    <Text style={styles.txt}>{valor2}</Text>
+                </View>
+                <View>
+                    <Text style={styles.txt}>{valor3}</Text>
+                </View>
+                <View>
+                    <MaterialCommunityIcons name="omega" size={32}/>
+                </View>             
+            </View>   
+            <View style={styles.faixasContainer}>
+                <View style={[styles.faixaContainer1, styles2.corCont1]}>
+                </View>
+                <View style={[styles.faixaContainer2, styles2.corCont2]}>
+                </View>
+                <View style={[styles.faixaContainer3, styles2.corCont3]}>
+                </View>
+            </View>                  
             <View>
                 <Botao onPress={voltarHandler}>VOLTAR</Botao>
             </View>            
@@ -68,7 +69,7 @@ const styles = StyleSheet.create({
     rootContainer: {
         flex: 1,
         backgroundColor: '#FFB6C1',
-        paddingVertical: 32,
+        paddingVertical: 10,
     },
     txtContainer: {
         alignSelf: 'center',
@@ -100,7 +101,8 @@ const styles = StyleSheet.create({
     faixasContainer: {
         flexDirection: 'row',
         justifyContent: 'space-evenly',
-        paddingHorizontal: 60
+        paddingHorizontal: 60,
+        flex: 1
     },
     faixaContainer1: {
         width: '30%', 
