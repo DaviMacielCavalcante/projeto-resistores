@@ -45,7 +45,7 @@ React-Native é um framework baseado em JavaScript que utilizamos em nosso proje
 
 O Expo é um conjunto de ferramentas que facilitam a criaçaõ de softwares em React-Native, como ele foi utilizado neste projeto é necessário ser instalado.
 
-[Aqui um tutorial ara instalação do Expo em Windows](https://youtu.be/Fx3nabgtar0)
+[Aqui um tutorial para instalação do Expo em Windows](https://youtu.be/Fx3nabgtar0)
 
 ## Execução do software: 
 
