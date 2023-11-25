@@ -6,6 +6,7 @@ import InitialScreen from './screens/InitialScreen';
 import ValorNumericoScreen from './screens/ValorNumericoScreen';
 import CorScreen from './screens/CorScreen';
 import ResultadoScreen from './screens/ResultadoScreen';
+import AjudaScreen from './screens/AjudaScreen';
 
 const Tab = createNativeStackNavigator();
 
@@ -18,6 +19,7 @@ export default function App() {
         <Tab.Screen name='ValorNumericoScreen' component={ValorNumericoScreen} options={{headerTitle: ''}}/>
         <Tab.Screen name='CorScreen' component={CorScreen} options={{headerTitle: ''}}/>
         <Tab.Screen name='ResultadoScreen' component={ResultadoScreen} options={{headerTitle: ''}}/>
+        <Tab.Screen name='AjudaScreen' component={AjudaScreen} options={{headerTitle: ''}}/>
       </Tab.Navigator>
     </NavigationContainer>
   );

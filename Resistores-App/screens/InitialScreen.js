@@ -7,6 +7,10 @@ function InitialScreen({navigation}) {
     function corHandler() {
         navigation.navigate('CorScreen');
     }
+
+    function ajudaHandler() {
+        navigation.navigate('AjudaScreen');
+    }
     
     function valorHandler() {
         navigation.navigate('ValorNumericoScreen');
@@ -20,6 +24,7 @@ function InitialScreen({navigation}) {
             <View style={styles.contentContainer}>
                 <Botao onPress={corHandler}>COR</Botao>
                 <Botao onPress={valorHandler}>VALOR</Botao>
+                <Botao onPress={ajudaHandler}>Ajuda</Botao>
             </View>            
         </View>
     );
