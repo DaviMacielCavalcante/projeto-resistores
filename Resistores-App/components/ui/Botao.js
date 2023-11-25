@@ -1,8 +1,8 @@
 import { View, Text, StyleSheet, Pressable } from "react-native";
 
-function Botao({children}) {
+function Botao({children, onPress}) {
     return (
-        <Pressable>
+        <Pressable onPress={onPress}>
             <View style={styles.btnContainer}>
                 <Text style={styles.txtBtn}>{children}</Text>
             </View>

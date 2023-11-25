@@ -2,15 +2,29 @@ import { View, Text, StyleSheet } from "react-native";
 
 import Botao from "../components/ui/Botao";
 
-function InitialScreen() {
+function InitialScreen({navigation}) {
+
+    function corHandler() {
+        navigation.navigate('CorScreen');
+    }
+
+    function ajudaHandler() {
+        navigation.navigate('AjudaScreen');
+    }
+    
+    function valorHandler() {
+        navigation.navigate('ValorNumericoScreen');
+    }
+
     return (
         <View style={styles.rootContainer}>
             <View style={styles.txtContainer}>
                 <Text style={styles.txt}>O QUE VOCÊ DESEJA VERIFICAR?</Text>
             </View>            
             <View style={styles.contentContainer}>
-                <Botao>COR</Botao>
-                <Botao>VALOR</Botao>
+                <Botao onPress={corHandler}>COR</Botao>
+                <Botao onPress={valorHandler}>VALOR</Botao>
+                <Botao onPress={ajudaHandler}>Ajuda</Botao>
             </View>            
         </View>
     );
