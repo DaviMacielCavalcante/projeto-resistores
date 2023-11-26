@@ -32,6 +32,7 @@ O Yarn é um gerenciador de pacotes, que no caso do nosso projeto, costuma ser m
 O VisualStudio Code (conhecido também como "vs code"), é a IDE que utilizamos para excutar os comandos via terminal para que o projeto execute.
 
 [Link para download do VisualStudio Code](https://code.visualstudio.com/download)
+
 [Tutorial para instalação do Visual Studio Code em Windows](https://youtu.be/CPmQwlycfGI)
 
 ### React-Native
